@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { ProfileCard } from './Profile.styled';
+import { ProfileAvatar } from './Profile.styled';
 
 export function Profile({
   name,
@@ -8,8 +10,13 @@ export function Profile({
   stats: { followers, views, likes },
 }) {
   return (
-    <div>
-      <img src={avatar} alt="User avatar" className="avatar" />
+    <ProfileCard>
+      <ProfileAvatar
+        src={avatar}
+        alt="User avatar"
+        className="avatar"
+        width="100px"
+      />
       <p className="name">{name}</p>
       <p className="tag">@{tag}</p>
       <p className="location">{location}</p>
@@ -27,7 +34,7 @@ export function Profile({
           <span className="quantity">{likes}</span>
         </li>
       </ul>
-    </div>
+    </ProfileCard>
   );
 }
 
