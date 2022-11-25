@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Item, ItemText, ItemNumber } from './StatsItem.styled';
 
 export function StatsItems({ children, quantity }) {
@@ -8,3 +9,7 @@ export function StatsItems({ children, quantity }) {
     </Item>
   );
 }
+
+StatsItems.propTypes = {
+  quantity: PropTypes.number,
+};
