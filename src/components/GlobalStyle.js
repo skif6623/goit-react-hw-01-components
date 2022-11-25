@@ -16,8 +16,34 @@ code {
     monospace;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  
+  height: auto;
+}
+
 `;
