@@ -13,10 +13,6 @@ export const ProfileCard = styled.div`
   overflow: hidden;
 `;
 
-export const DescriptionWrap = styled.div`
-  padding: 30px;
-`;
-
 export const ProfileAvatar = styled.img`
   display: block;
   margin: 0 auto;

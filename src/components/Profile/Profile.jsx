@@ -1,13 +1,12 @@
-import { StatsItems } from '../StatsItem/StatsItem';
-import { ListItem } from 'components/StatsItem/StatsItem.styled';
 import PropTypes from 'prop-types';
+import { StatsItems } from 'components/StatsItem/StatsItem';
 import {
   ProfileCard,
   ProfileName,
   ProfileAvatar,
   ProfileDescription,
-  DescriptionWrap,
 } from './Profile.styled';
+import { Box } from 'components/Box';
 
 export function Profile({
   name,
@@ -18,17 +17,17 @@ export function Profile({
 }) {
   return (
     <ProfileCard>
-      <DescriptionWrap>
+      <Box p={30}>
         <ProfileAvatar src={avatar} alt="User avatar" width="100px" />
         <ProfileName>{name}</ProfileName>
         <ProfileDescription>@{tag}</ProfileDescription>
         <ProfileDescription>{location}</ProfileDescription>
-      </DescriptionWrap>
-      <ListItem>
+      </Box>
+      <Box display="flex">
         <StatsItems quantity={followers}>Followers</StatsItems>
         <StatsItems quantity={views}>Views</StatsItems>
         <StatsItems quantity={likes}>Likes</StatsItems>
-      </ListItem>
+      </Box>
     </ProfileCard>
   );
 }
