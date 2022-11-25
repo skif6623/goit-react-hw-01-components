@@ -1,9 +1,19 @@
-import { StatisticItem } from './StaticticItem';
+import { StatisticItem } from 'components/StatisticItem/StaticticItem';
+import { Section, StatisticTitle } from './Statistics.styled';
+import { Box } from 'components/Box';
 
 export function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
+    <Section>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        height={90}
+        bg="white"
+      >
+        <StatisticTitle className="title">{title}</StatisticTitle>
+      </Box>
 
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => {
@@ -12,6 +22,6 @@ export function Statistics({ title, stats }) {
           );
         })}
       </ul>
-    </section>
+    </Section>
   );
 }
