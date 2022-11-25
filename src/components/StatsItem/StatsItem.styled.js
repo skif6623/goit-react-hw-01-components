@@ -16,8 +16,8 @@ export const Item = styled.div`
 `;
 
 export const ItemText = styled.div`
-  color: grey;
   font-size: 12px;
+  color: grey;
 `;
 
 export const ItemNumber = styled.div`

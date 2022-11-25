@@ -4,10 +4,10 @@ export const ProfileCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 auto;
-  margin-top: 20px;
   width: 270px;
   height: 360px;
+  margin: 0 auto;
+  margin-top: 20px;
   border: 2px solid grey;
   border-radius: 8px;
   overflow: hidden;
@@ -20,8 +20,8 @@ export const DescriptionWrap = styled.div`
 export const ProfileAvatar = styled.img`
   display: block;
   margin: 0 auto;
-  background-color: red;
   text-align: center;
+  background-color: red;
   border: 2px solid black;
   border-radius: 50%;
 `;
