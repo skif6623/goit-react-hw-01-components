@@ -1,10 +1,10 @@
-import { Item } from './StatsItem.styled';
+import { Item, ItemText, ItemNumber } from './StatsItem.styled';
 
 export function StatsItems({ children, quantity }) {
   return (
     <Item>
-      <span>{children}</span>
-      <span>{quantity}</span>
+      <ItemText>{children}</ItemText>
+      <ItemNumber>{quantity}</ItemNumber>
     </Item>
   );
 }
