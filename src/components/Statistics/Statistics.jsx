@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StatisticItem } from 'components/StatisticItem/StaticticItem';
 import { Section, StatTitle, StatList } from './Statistics.styled';
 import { Box } from 'components/Box';
@@ -12,7 +13,7 @@ export function Statistics({ title, stats }) {
         height={90}
         bg="white"
       >
-        <StatTitle className="title">{title}</StatTitle>
+        <StatTitle>{title}</StatTitle>
       </Box>
 
       <StatList>
@@ -25,3 +26,14 @@ export function Statistics({ title, stats }) {
     </Section>
   );
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};

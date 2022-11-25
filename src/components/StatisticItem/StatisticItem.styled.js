@@ -6,8 +6,11 @@ export const StatItem = styled.li`
   flex-direction: column;
   align-items: center;
   flex-basis: calc(100% / 5);
-  padding: 5px 0;
   gap: 3px;
+
+  padding: 5px 0;
+
+  color: #c0bdbd;
   background-color: ${p => getRandomHexColor()};
 `;
 
