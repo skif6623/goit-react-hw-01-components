@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { StatsItems } from 'components/StatsItem/StatsItem';
+import { ProfileItems } from 'components/ProfileItem/ProfileItem';
 import {
   ProfileCard,
   ProfileName,
@@ -24,9 +24,9 @@ export function Profile({
         <ProfileDescription>{location}</ProfileDescription>
       </Box>
       <Box display="flex">
-        <StatsItems quantity={followers}>Followers</StatsItems>
-        <StatsItems quantity={views}>Views</StatsItems>
-        <StatsItems quantity={likes}>Likes</StatsItems>
+        <ProfileItems quantity={followers}>Followers</ProfileItems>
+        <ProfileItems quantity={views}>Views</ProfileItems>
+        <ProfileItems quantity={likes}>Likes</ProfileItems>
       </Box>
     </ProfileCard>
   );

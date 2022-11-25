@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { Item, ItemText, ItemNumber } from './StatsItem.styled';
+import { Item, ItemText, ItemNumber } from './ProfileItem.styled';
 
-export function StatsItems({ children, quantity }) {
+export function ProfileItems({ children, quantity }) {
   return (
     <Item>
       <ItemText>{children}</ItemText>
@@ -10,6 +10,6 @@ export function StatsItems({ children, quantity }) {
   );
 }
 
-StatsItems.propTypes = {
+ProfileItems.propTypes = {
   quantity: PropTypes.number,
 };
