@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomHexColor } from 'utils/getRandomHexColor';
 
 export const StatItem = styled.li`
   display: flex;
@@ -7,7 +8,7 @@ export const StatItem = styled.li`
   flex-basis: calc(100% / 5);
   padding: 5px 0;
   gap: 3px;
-  border: 1px solid grey;
+  background-color: ${p => getRandomHexColor()};
 `;
 
 export const StatLabel = styled.span`
