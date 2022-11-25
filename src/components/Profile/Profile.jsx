@@ -1,6 +1,12 @@
+import { StatsItems } from '../StatsItem/StatsItem';
+import { ListItem } from 'components/StatsItem/StatsItem.styled';
 import PropTypes from 'prop-types';
-import { ProfileCard } from './Profile.styled';
-import { ProfileAvatar } from './Profile.styled';
+import {
+  ProfileCard,
+  ProfileName,
+  ProfileAvatar,
+  ProfileDescription,
+} from './Profile.styled';
 
 export function Profile({
   name,
@@ -11,29 +17,15 @@ export function Profile({
 }) {
   return (
     <ProfileCard>
-      <ProfileAvatar
-        src={avatar}
-        alt="User avatar"
-        className="avatar"
-        width="100px"
-      />
-      <p className="name">{name}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
+      <ProfileAvatar src={avatar} alt="User avatar" width="100px" />
+      <ProfileName>{name}</ProfileName>
+      <ProfileDescription>@{tag}</ProfileDescription>
+      <ProfileDescription>{location}</ProfileDescription>
+      <ListItem>
+        <StatsItems quantity={followers}>Followers</StatsItems>
+        <StatsItems quantity={views}>Views</StatsItems>
+        <StatsItems quantity={likes}>Likes</StatsItems>
+      </ListItem>
     </ProfileCard>
   );
 }

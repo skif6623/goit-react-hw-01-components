@@ -1,4 +1,5 @@
 import user from 'user';
+import { GlobalStyle } from './GlobalStyle';
 import { Profile } from './Profile/Profile';
 
 export const App = () => {
@@ -11,6 +12,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       ></Profile>
+      <GlobalStyle />
     </div>
   );
 };
