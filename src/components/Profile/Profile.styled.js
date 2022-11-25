@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
 export const ProfileCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   margin-top: 20px;
-  /* padding: 30px; */
-  width: 300px;
-  height: 400px;
+  width: 270px;
+  height: 360px;
   border: 2px solid grey;
   border-radius: 8px;
+  overflow: hidden;
+`;
+
+export const DescriptionWrap = styled.div`
+  padding: 30px;
 `;
 
 export const ProfileAvatar = styled.img`

@@ -6,6 +6,7 @@ import {
   ProfileName,
   ProfileAvatar,
   ProfileDescription,
+  DescriptionWrap,
 } from './Profile.styled';
 
 export function Profile({
@@ -17,10 +18,12 @@ export function Profile({
 }) {
   return (
     <ProfileCard>
-      <ProfileAvatar src={avatar} alt="User avatar" width="100px" />
-      <ProfileName>{name}</ProfileName>
-      <ProfileDescription>@{tag}</ProfileDescription>
-      <ProfileDescription>{location}</ProfileDescription>
+      <DescriptionWrap>
+        <ProfileAvatar src={avatar} alt="User avatar" width="100px" />
+        <ProfileName>{name}</ProfileName>
+        <ProfileDescription>@{tag}</ProfileDescription>
+        <ProfileDescription>{location}</ProfileDescription>
+      </DescriptionWrap>
       <ListItem>
         <StatsItems quantity={followers}>Followers</StatsItems>
         <StatsItems quantity={views}>Views</StatsItems>
