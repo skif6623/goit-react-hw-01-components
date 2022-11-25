@@ -1,8 +1,10 @@
+import { StatItem, StatLabel } from './StatisticItem.styled';
+
 export function StatisticItem({ label, percentage }) {
   return (
-    <li className="item">
-      <span className="label">{label}</span>
+    <StatItem>
+      <StatLabel className="label">{label}</StatLabel>
       <span className="percentage">{percentage}%</span>
-    </li>
+    </StatItem>
   );
 }
