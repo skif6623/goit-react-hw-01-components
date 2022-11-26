@@ -1,9 +1,12 @@
+import { ListItem } from './FriendListItem.styled';
+import { StatusCircle } from './FriendListItem.styled';
+
 export function FriendListItem({ avatar, name, status }) {
   return (
-    <li className="item">
-      <span className="status"></span>
+    <ListItem className="item">
+      <StatusCircle className="status"></StatusCircle>
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
       <p className="name">{name}</p>
-    </li>
+    </ListItem>
   );
 }
