@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
-import { ListItem } from './FriendListItem.styled';
-import { StatusCircle } from './FriendListItem.styled';
+import { ListItem, StatusCircle, Name } from './FriendListItem.styled';
 
 export function FriendListItem({ avatar, name, status }) {
   return (
     <ListItem>
       <StatusCircle status={status}></StatusCircle>
-      <img src={avatar} alt="User avatar" width="48" />
-      <p>{name}</p>
+      <img src={avatar} alt="User avatar" width="60" />
+      <Name>{name}</Name>
     </ListItem>
   );
 }

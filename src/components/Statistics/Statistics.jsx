@@ -9,8 +9,8 @@ export function Statistics({ title, stats }) {
       <Box
         display="flex"
         alignItems="center"
+        flexGrow={1}
         justifyContent="center"
-        height={90}
         bg="white"
       >
         <StatTitle>{title}</StatTitle>

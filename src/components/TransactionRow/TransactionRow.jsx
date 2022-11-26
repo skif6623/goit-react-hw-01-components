@@ -1,9 +1,18 @@
-export function TransactionRow({ type, amount, currency }) {
+import { Row, Data } from './TransactionRow.styled';
+import PropTypes from 'prop-types';
+
+export function TransactionRow({ type, amount, currency, index }) {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <Row index={index}>
+      <Data>{type}</Data>
+      <Data>{amount}</Data>
+      <Data>{currency}</Data>
+    </Row>
   );
 }
+
+TransactionRow.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};
