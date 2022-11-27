@@ -13,7 +13,7 @@ export function Statistics({ title, stats }) {
         justifyContent="center"
         bg="white"
       >
-        <StatTitle>{title}</StatTitle>
+        {title && <StatTitle>{title}</StatTitle>}
       </Box>
 
       <StatList>
